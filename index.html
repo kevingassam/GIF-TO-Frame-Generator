@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Latest compiled and minified CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="shortcut icon" href="https://f.hellowork.com/blogdumoderateur/2013/02/nyan-cat-gif-1.gif" type="image/x-icon">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- CSS pour jQuery Toast Plugin -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/jquery-toast-plugin/1.3.2/jquery.toast.min.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <title>Transformez vos GIFs en Icônes Dynamiques</title>
+  </head>
+  <body>
+
+    <div class="preloader">
+        <div class="spinner"></div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"> GIF TO Frame Generator </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarText"
+          aria-controls="navbarText"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Features</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Pricing</a>
+            </li>
+          </ul>
+          <span class="navbar-text"> Contact </span>
+        </div>
+      </div>
+    </nav>
+    <div>
+      <div class="first-head p-3">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-8 p-3">
+                <br>
+              <h4>
+                l'outil ultime pour convertir vos GIFs en icônes de navigateur
+                animées !
+              </h4>
+              <br>
+              <h3>
+                <b>
+                  Que vous soyez un designer, un développeur web ou simplement
+                  un passionné de personnalisation, notre plateforme vous permet
+                  de donner vie à vos icônes de navigateur avec des animations
+                  captivantes.
+                </b>
+              </h3>
+              <br><br>
+            </div>
+            <div class="col-sm-4">
+                <img src="https://f.hellowork.com/blogdumoderateur/2013/02/nyan-cat-gif-1.gif" alt="" class="w-100">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-8">
+          <div class="card p-3 mt-5">
+            <h4 class="text-center">Ajouter un fichier</h4>
+            <br />
+            <form
+              id="form"
+              method="POST"
+              action="http://127.0.0.1:8000/generate"
+              enctype="multipart/form-data"
+            >
+              <div class="form-upload-div mb-2">
+                <label for="">
+                  <img
+                    width="50"
+                    height="50"
+                    src="https://img.icons8.com/ios/50/aeb3b3/upload--v1.png"
+                    id="preview-image"
+                    alt="upload--v1"
+                  />
+                  <br />
+                  Télécharger un GIF (max. 2MB) : <br />
+                  <small class="form-text text-muted">
+                    Les GIFs peuvent être de taille maximum de 2MB.
+                  </small>
+                </label>
+              </div>
+              <div class="mb-3">
+                <button type="submit" class="btn btn-primary">
+                  Générer le favicon
+                </button>
+                <input
+                  type="file"
+                  id="input-file"
+                  class="d-none"
+                  name="file"
+                  accept="image/gif"
+                />
+              </div>
+            </form>
+          </div>
+          <div class="card p-3 installation d-none mt-5" id="installation">
+            <h5>
+              <img
+                width="20"
+                height="20"
+                src="https://img.icons8.com/ios/20/1A1A1A/code--v1.png"
+                alt="code--v1"
+              />
+              Installation
+            </h5>
+            <p class="small">
+              Pour générer votre favicon, vous devez ajouter un fichier GIF à
+              votre ordinateur. Ensuite, vous pouvez télécharger votre favicon
+              en format PNG, JPEG ou WebP. Vous pouvez aussi utiliser le
+              générateur de favicon en ligne.
+            </p>
+            <b> Ajouter dans le header </b>
+            <div class="form-control text-center">
+              <pre><code>&lt;link rel="icon" href="favicon.ico" type="image/x-icon"&gt;</code></pre>
+            </div>
+            <br />
+          </div>
+        </div>
+        <div class="col-sm-2"></div>
+      </div>
+    </div>
+    <br />
+    <div class="footer" id="end">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6 mx-auto text-center">
+            <div>
+              <img
+                width="30"
+                height="30"
+                src="https://img.icons8.com/ios-filled/30/1A1A1A/github.png"
+                alt="github"
+              />
+              <img
+                width="30"
+                height="30"
+                src="https://img.icons8.com/ios-filled/30/1A1A1A/circled-envelope.png"
+                alt="circled-envelope"
+              />
+            </div>
+            <div class="mt-2">
+              <b>Created by :</b>
+              <a href="">Kevin Gassam</a>
+            </div>
+            <p class="small mt-3">
+              I built Favicon.io because creating a favicon should be a simple
+              process. No other favicon generator or favicon creator can make a
+              well designed favicon from text. If you like favicon.io or have a
+              suggestion feel free to say hello. Feedback is much appreciated!
+            </p>
+            <p class="text-muted">
+                Copyright © 2024 Favicon.io. All rights reserved.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-toast-plugin/1.3.2/jquery.toast.min.js"></script>
+  <script src="./script.js"></script>
+</html>

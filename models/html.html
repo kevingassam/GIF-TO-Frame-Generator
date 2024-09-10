@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <title>GIF TO Frame Generator</title>
+  </head>
+  <body>
+    <script>
+      const intervalTime = 1000 / 30;
+
+      function changeFavicon(index) {
+        const faviconLink =
+          document.querySelector("link[rel*='icon']") ||
+          document.createElement("link");
+        faviconLink.rel = "icon";
+        faviconLink.href = `./frame_${index}.png`;
+        document.getElementsByTagName("head")[0].appendChild(faviconLink);
+      }
+
+      function animateFavicon() {
+        let currentIndex = 0;
+        setInterval(function () {
+          changeFavicon(currentIndex);
+          currentIndex = (currentIndex + 1) % total_image;
+        }, intervalTime);
+      }
+
+      animateFavicon();
+    </script>
+  </body>
+</html>
